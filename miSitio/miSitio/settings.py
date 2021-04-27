@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'biblioteca',
-    'django.contrib.admin',
+    'contactos',
+
 ]
 
 MIDDLEWARE = [
@@ -147,3 +148,4 @@ MIDDLEWARE_CLASSES=(
     'django.contrib.messages.middleware.MessageMiddleware'
 
 )
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'

@@ -14,12 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from miSitio.views import fecha_actual,horas_adelante
+from miSitio.views import  *
+from django.contrib import admin
+from biblioteca import views
+from contactos.views import contactos
 
 urlpatterns = [
     #url(r'^hola/$', hola),
     #url(r'^$', raiz),
-    url(r'^fecha/mas/\d{1,2}/$', horas_adelante ),
-    url(r'^fecha/$',fecha_actual)
+    #url(r'^fecha/mas/\d{1,2}/$', horas_adelante ),
+    #url(r'^fecha/$',fecha_actual),
+    url(r'^admin/', admin.site.urls),
+    #url(r'^atributos/$', atributos_meta),
+    #url(r'^navegador/$',mostrar_navegador),
+    #url(r'^navegador1/$', mostrar_navegador2),
+    #url(r'^formulario-buscar/', views.formulario_buscar),
+    url(r'^buscar/$', views.buscar),
+    url(r'^contactos/$',contactos),
+
     
 ]
